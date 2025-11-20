@@ -1,0 +1,194 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    FLASHLIGHT SYSTEM - SETUP GUIDE
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ WHAT'S BEEN DONE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ✓ Created FlashlightController.cs - Professional flashlight system
+2. ✓ Removed jump functionality from BetterPlayerMovement.cs
+3. ✓ Updated Input System - Changed "Jump" action to "Flashlight"
+4. ✓ Changed keybinding from SPACEBAR to F key
+
+═══════════════════════════════════════════════════════════════════════════════
+                         SETUP INSTRUCTIONS
+═══════════════════════════════════════════════════════════════════════════════
+
+STEP 1: ADD FLASHLIGHT TO YOUR PLAYER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Select your Player GameObject in the Hierarchy
+2. Click "Add Component" in the Inspector
+3. Search for "FlashlightController"
+4. Add it to your player
+
+STEP 2: CONFIGURE THE FLASHLIGHT (Optional - Auto-Setup Works!)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The flashlight will auto-create if not found, but you can customize:
+
+▸ LIGHT PROPERTIES:
+  - Intensity: 2.5 (brightness)
+  - Range: 20 (how far the light reaches)
+  - Spot Angle: 50° (width of the beam)
+  - Inner Spot Angle: 25° (smooth center)
+
+▸ VISUAL EFFECTS:
+  - Smooth Transition: ON (smooth fade in/out)
+  - Enable Flicker: ON (realistic light flicker)
+  - Flicker Amount: 0.05 (subtle variation)
+
+▸ BATTERY SIMULATION (Optional):
+  - Simulate Battery: OFF by default
+  - Battery Life: 300 seconds (5 minutes)
+  - Enable this for added challenge!
+
+STEP 3: POSITION THE LIGHT (Optional)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If you want to manually position:
+
+1. Find/Create child GameObject under Camera called "Flashlight"
+2. Position it: X: 0.2, Y: -0.1, Z: 0.3 (or adjust to your preference)
+3. Drag this GameObject to the "Flashlight" field in FlashlightController
+
+STEP 4: REGENERATE INPUT SYSTEM (IMPORTANT!)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Unity needs to regenerate the input class:
+
+1. In Project window, go to: Assets/InputSystem_Actions.inputactions
+2. Click on it to select it
+3. In the Inspector, click "Generate C# Class" button
+4. Wait for Unity to recompile
+
+STEP 5: TEST YOUR FLASHLIGHT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Press PLAY
+2. Press F KEY to toggle flashlight on/off
+3. Try pressing SPACEBAR - nothing should happen (jump removed!)
+
+═══════════════════════════════════════════════════════════════════════════════
+                         KEYBINDINGS
+═══════════════════════════════════════════════════════════════════════════════
+
+✓ F KEY (Keyboard)    - Toggle Flashlight
+✓ Y Button (Xbox)     - Toggle Flashlight (Gamepad West button)
+✗ SPACEBAR (REMOVED)  - No longer jumps
+
+═══════════════════════════════════════════════════════════════════════════════
+                         ADVANCED FEATURES
+═══════════════════════════════════════════════════════════════════════════════
+
+🔦 REALISTIC LIGHTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Soft shadows enabled
+- Spot light type (cone beam)
+- Smooth falloff
+- Subtle flickering effect
+
+🎨 LIGHT COOKIE (Optional):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Add a texture to the "Light Cookie" field for:
+- Dusty/dirty lens effect
+- Flashlight pattern overlay
+- More realistic beam shape
+
+🔋 BATTERY SYSTEM:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Enable "Simulate Battery" for:
+- Limited flashlight usage
+- Light dims when battery is low (<30s)
+- Adds survival horror element
+
+🔊 SOUND EFFECTS (Optional):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Add an AudioClip to "Toggle Sound" for:
+- Click sound when turning on/off
+- Adjust volume with "Toggle Volume" slider
+
+═══════════════════════════════════════════════════════════════════════════════
+                         SCRIPTING API
+═══════════════════════════════════════════════════════════════════════════════
+
+Access from other scripts:
+
+// Get the flashlight controller
+FlashlightController flashlight = player.GetComponent<FlashlightController>();
+
+// Methods:
+flashlight.ToggleFlashlight();      // Toggle on/off
+flashlight.TurnOn();                // Force on
+flashlight.TurnOff();               // Force off
+flashlight.IsOn();                  // Check if on (returns bool)
+flashlight.GetBatteryPercent();     // Get battery % (0-100)
+flashlight.RechargeBattery();       // Refill battery
+
+═══════════════════════════════════════════════════════════════════════════════
+                         DEBUG MODE
+═══════════════════════════════════════════════════════════════════════════════
+
+Enable "Show Debug Info" to see:
+- Flashlight status (ON/OFF)
+- Current intensity
+- Range and spot angle
+- Battery percentage (if enabled)
+- Console logs for all actions
+
+═══════════════════════════════════════════════════════════════════════════════
+                         TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════════════════
+
+❌ F KEY DOESN'T WORK:
+   → Make sure you regenerated the Input System C# class
+   → Check that PlayerInput component has the correct Action Asset
+   → Verify "Flashlight" action exists in Input Actions
+
+❌ NO LIGHT APPEARS:
+   → Check if "Flashlight" field is assigned in Inspector
+   → Make sure the Light component exists
+   → Check if light is enabled and intensity > 0
+
+❌ SPACEBAR STILL JUMPS:
+   → Make sure you saved all files
+   → Reload/restart Unity
+   → Check BetterPlayerMovement.cs doesn't have OnJump method
+
+❌ INPUT NOT RESPONDING:
+   → Select your Player GameObject
+   → Check if it has "Player Input" component
+   → Verify "Actions" field points to InputSystem_Actions
+
+═══════════════════════════════════════════════════════════════════════════════
+                         QUALITY SETTINGS (OPTIONAL)
+═══════════════════════════════════════════════════════════════════════════════
+
+For BEST visuals with the flashlight:
+
+1. Edit → Project Settings → Quality
+2. Set "Pixel Light Count" to at least 2
+3. Enable "Soft Shadows"
+4. Set "Shadow Resolution" to High
+
+For URP:
+1. Select your URP Renderer Asset (Assets/Settings/PC_Renderer)
+2. Ensure "Additional Lights" is enabled
+3. Set "Per Object Limit" to at least 4
+
+═══════════════════════════════════════════════════════════════════════════════
+                         SUMMARY
+═══════════════════════════════════════════════════════════════════════════════
+
+✓ Professional flashlight with realistic lighting
+✓ F key toggle (no more spacebar jump)
+✓ Auto-setup with manual override options
+✓ Smooth transitions and flickering
+✓ Optional battery system
+✓ Optional sound effects
+✓ Full scripting API for game integration
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Created by: GitHub Copilot
+Date: November 23, 2025

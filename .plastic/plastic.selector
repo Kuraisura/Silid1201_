@@ -1,0 +1,4 @@
+repository "Silid 1201/Silid 1201 2025-11-25_19-39-07@20067098993639@cloud"
+  path "/"
+    br "/main"
+    co "/main"

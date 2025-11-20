@@ -1,0 +1,13 @@
+{
+    "asset": "2ff1e317289e7044dac8d94e450f2cca",
+    "fileName": "019aa4c3-0009-7d7f-842f-07c58b202883.wav",
+    "prompt": "“Create a quiet ambience inside an empty, abandoned school building. Soft wind drifting through cracked windows, distant light rattling of old lockers, occasional wooden floor creaks, faint hum of broken fluorescent lights, subtle echoes in long empty hallways, and gentle distant thuds from settling structure. Atmosphere should feel cold, hollow, and deserted, with long reverb and spacious acoustics.”",
+    "negativePrompt": "",
+    "model": "ee31b223-3fe1-4ae6-bf54-d8a80bb4b0e1",
+    "modelName": "Text to Sound",
+    "customSeed": -1,
+    "w3CTraceId": "eb7afa2e51d5ecbe8989c762b749bf2d",
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false
+}

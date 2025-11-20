@@ -1,0 +1,11 @@
+{
+    "asset": "5933cecf82161c3418257d25d56c756d",
+    "fileName": "019aa4bd-ae86-7ba6-ac9a-ff5bbdf0c0bf.pose.json",
+    "prompt": "LockerAnimationClose Closing a Locker",
+    "negativePrompt": "",
+    "model": "9e46c009-67d8-4254-a3a0-32e3168247ee",
+    "modelName": "Text to Motion",
+    "customSeed": 243383552,
+    "w3CTraceId": "4004fe4462e0c06475b8eb390e56b540",
+    "isTrimmed": false
+}

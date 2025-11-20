@@ -1,0 +1,143 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    ✅ ALL FEATURES UPDATED & IMPROVED!
+═══════════════════════════════════════════════════════════════════════════════
+
+🔦 1. FLASHLIGHT - NOW MUCH BRIGHTER!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CHANGES:
+✓ Intensity: 2.5 → 10 (4x brighter!)
+✓ Range: 20m → 50m (2.5x longer beam)
+✓ Spot Angle: 50° → 60° (wider beam)
+✓ Inner Spot Angle: 25° → 30° (better center)
+
+RESULT: You'll now see a STRONG, VISIBLE flashlight beam!
+
+🏃 2. SPRINT - NOW HOLD TO RUN!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BEFORE: Toggle sprint (press once = sprint forever)
+NOW: HOLD Left Shift = Run, Release = Walk
+
+✓ Press and HOLD Left Shift → Character runs
+✓ Release Left Shift → Character walks
+✓ More realistic and easier to control!
+
+🦆 3. CROUCH - NOW TOGGLE + CAMERA LOWERS!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BEFORE: Hold C to crouch (had to hold it)
+NOW: Press C to TOGGLE crouch
+
+FEATURES:
+✓ Press C → Crouch (stays crouched)
+✓ Press C again → Stand up
+✓ Camera LOWERS by 0.5 units when crouched
+✓ Smooth transition (10 speed)
+✓ Movement slowed to crouchSpeed (2.5)
+
+RESULT: Realistic crouching with camera going down!
+
+═══════════════════════════════════════════════════════════════════════════════
+                         🎮 NEW CONTROLS SUMMARY
+═══════════════════════════════════════════════════════════════════════════════
+
+WASD / Arrow Keys    → Move
+Mouse                → Look around
+Left Shift (HOLD)    → Sprint (runs while held)
+C (TOGGLE)           → Crouch/Stand (press to toggle)
+F (TOGGLE)           → Flashlight ON/OFF
+ESC                  → Unlock cursor
+
+═══════════════════════════════════════════════════════════════════════════════
+                         ⚙️ ADJUSTABLE SETTINGS
+═══════════════════════════════════════════════════════════════════════════════
+
+In Inspector (BetterPlayerMovement):
+
+SPEEDS:
+- Walk Speed: 5 (normal walking)
+- Run Speed: 10 (when holding Shift)
+- Crouch Speed: 2.5 (when crouched)
+
+CROUCH:
+- Crouch Camera Height: 0.5 (how much camera lowers)
+- Crouch Transition Speed: 10 (how fast to crouch)
+
+In Inspector (SimpleFlashlightController):
+
+FLASHLIGHT:
+- Intensity: 10 (brightness)
+- Range: 50 (how far it reaches)
+- Spot Angle: 60 (beam width)
+
+═══════════════════════════════════════════════════════════════════════════════
+                         🎯 TEST ALL FEATURES NOW!
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Press PLAY
+2. Test Flashlight:
+   - Press F → Should see BRIGHT light beam
+   - Press F again → Light turns off
+   
+3. Test Sprint:
+   - HOLD Left Shift → Character runs fast
+   - Release → Character walks normally
+   
+4. Test Crouch:
+   - Press C → Character crouches (camera goes down, slower movement)
+   - Press C again → Character stands up (camera goes back up)
+   - Try moving while crouched → Slower movement!
+
+═══════════════════════════════════════════════════════════════════════════════
+                         🔧 TECHNICAL CHANGES MADE
+═══════════════════════════════════════════════════════════════════════════════
+
+SimpleFlashlightController.cs:
+✓ Increased default intensity from 2.5 to 10
+✓ Increased range from 20 to 50
+✓ Increased spot angles for better coverage
+✓ Increased max intensity slider to 20 (was 10)
+
+BetterPlayerMovement.cs:
+✓ Added crouch toggle system (isCrouchToggled)
+✓ Added camera height tracking (originalCameraHeight, targetCameraHeight)
+✓ Added HandleCrouchCamera() method
+✓ Added crouch settings (crouchCameraHeight, crouchTransitionSpeed)
+✓ Changed OnSprint() to check isPressed (HOLD behavior)
+✓ Changed OnCrouch() to toggle on press
+✓ Updated DetermineSpeed() to use isCrouchToggled instead of isCrouching
+
+═══════════════════════════════════════════════════════════════════════════════
+                         💡 TIPS & TRICKS
+═══════════════════════════════════════════════════════════════════════════════
+
+FLASHLIGHT TOO BRIGHT?
+→ Lower "Intensity" in Inspector (try 5-8)
+
+FLASHLIGHT STILL NOT VISIBLE?
+→ Make sure you're in a dark area
+→ Check the light is attached to Camera (Hierarchy → Camera → Flashlight)
+
+CROUCH TOO SLOW/FAST?
+→ Adjust "Crouch Transition Speed" (higher = faster)
+
+CROUCH NOT LOW ENOUGH?
+→ Increase "Crouch Camera Height" (try 0.7 or 1.0)
+
+SPRINT TOO FAST/SLOW?
+→ Adjust "Run Speed" in Inspector
+
+═══════════════════════════════════════════════════════════════════════════════
+                         ✅ EVERYTHING IS READY!
+═══════════════════════════════════════════════════════════════════════════════
+
+All features are now:
+✓ Flashlight: MUCH BRIGHTER (10x intensity, 50m range)
+✓ Sprint: HOLD Shift to run
+✓ Crouch: TOGGLE with C, camera lowers smoothly
+✓ No jump: Spacebar does nothing ✓
+
+Press PLAY and test everything! 🎮
+
+═══════════════════════════════════════════════════════════════════════════════

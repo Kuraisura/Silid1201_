@@ -1,0 +1,11 @@
+{
+    "asset": "de67e8978b150d04d92b56ba21d70913",
+    "fileName": "019aa4b8-3894-7d25-946b-8b9977121c82.pose.json",
+    "prompt": "Animation about opening a locker",
+    "negativePrompt": "",
+    "model": "9e46c009-67d8-4254-a3a0-32e3168247ee",
+    "modelName": "Text to Motion",
+    "customSeed": 740933096,
+    "w3CTraceId": "268707941bc5379907dc803e750a0688",
+    "isTrimmed": false
+}
